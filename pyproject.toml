@@ -7,7 +7,9 @@ authors = [
     { name = "Bhargav", email = "boyapatibhargav2822@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "httpx>=0.28.1",
+]
 
 [project.scripts]
 orderhub = "orderhub:main"
