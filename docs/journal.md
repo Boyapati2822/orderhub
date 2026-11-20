@@ -9,3 +9,7 @@
 ## 2026-11-19 (Day 2)
 
 - Built: Domain models OrderItem, Customer, Product, and Order in services/orders/models.py. OrderItem rejects quantity 0 or less. Order.total() computes the total from the items and product prices. 6 pytest tests pass.
+
+## 2026-11-19 (Day 3)
+
+- Built: Raw HTTP server with http.server (GET, POST, 411 on missing Content-Length) and an httpx client. Findings in docs/http-notes.md.
