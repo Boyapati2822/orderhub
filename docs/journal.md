@@ -13,3 +13,7 @@
 ## 2026-11-19 (Day 3)
 
 - Built: Raw HTTP server with http.server (GET, POST, 411 on missing Content-Length) and an httpx client. Findings in docs/http-notes.md.
+
+## Day 4: FastAPI products and orders
+
+Built FastAPI products CRUD (create, list, get, update, delete) with 404s on missing ids, plus POST /orders that rejects unknown product ids. Store is in memory for now.
