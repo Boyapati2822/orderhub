@@ -21,3 +21,7 @@ Built FastAPI products CRUD (create, list, get, update, delete) with 404s on mis
 ## Day 5: Unit tests and first CI pipeline
 
 Wrote pytest tests for the products and orders API with FastAPI TestClient, covering every route and its 404, 409, and 422 cases. Coverage is 100% for services/orders. Added a GitHub Actions workflow that runs ruff and pytest on every push and pull request.
+
+## Day 6: SQL and PostgreSQL
+
+Ran Postgres 16 with pgvector in Docker. Wrote the schema for customers, products, orders and order_items with primary and foreign keys, plus seed data and 10 practice queries (joins, GROUP BY, window function). EXPLAIN showed Hash Join and Seq Scan on the small tables. Open question: when an index on order_items.order_id starts to pay off.
