@@ -25,3 +25,6 @@ Wrote pytest tests for the products and orders API with FastAPI TestClient, cove
 ## Day 6: SQL and PostgreSQL
 
 Ran Postgres 16 with pgvector in Docker. Wrote the schema for customers, products, orders and order_items with primary and foreign keys, plus seed data and 10 practice queries (joins, GROUP BY, window function). EXPLAIN showed Hash Join and Seq Scan on the small tables. Open question: when an index on order_items.order_id starts to pay off.
+
+## Day 7: SQLAlchemy models and Alembic migrations
+Mapped the four tables (products, customers, orders, order_items) to SQLAlchemy 2 classes in services/orders/db.py. Created two Alembic migrations and applied them to the orderhub_orm database. Money uses Numeric(10,2), not float, because float cannot store decimal currency amounts exactly. The database URL comes from the DATABASE_URL value in the .env file, read by load_dotenv().
